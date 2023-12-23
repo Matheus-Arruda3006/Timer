@@ -1,8 +1,9 @@
 import { ThemeProvider } from 'styled-components'
 import { useState } from 'react'
-import { Button } from './assets/Button'
 import { defaultTheme } from './styles/themes/default'
 import { GlobalStyle } from './styles/themes/global'
+import { BrowserRouter } from 'react-router-dom';
+import { Router } from './Router';
 
 
 export function App() {
@@ -11,12 +12,9 @@ export function App() {
   return (
     
     <ThemeProvider theme={defaultTheme}>
-        <h1>Hi</h1>
-        <Button variant='primary'/>
-        <Button variant='secondary'/>
-        <Button variant='danger'/>
-        <Button variant='success'/>
-
+      <BrowserRouter>
+        <Router/>
+      </BrowserRouter>
         <GlobalStyle/>
     </ThemeProvider>
       
